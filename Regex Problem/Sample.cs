@@ -6,25 +6,43 @@ using System.Text.RegularExpressions;
 namespace Regex_Problem
 {
     class Sample
-    { 
-            string pattern = "^[A-Za-z]{2,}$";
-            public void ValidatingFirstName(string input)
+    {
+        static string FnamePattern = "^[A-Z]{1}[a-z]{2,}$";
+        static string LnamePattern = "^[A-Z]{1}[a-z]{2,}$";
+        public void ValidatingFirstName(string input)
+        {
+            Regex regex = new Regex(FnamePattern);
+            bool res = regex.IsMatch(input);
+            if (res)
             {
-                Regex regex = new Regex(pattern);
-
-                bool res = regex.IsMatch(input);
-                if (res)
-                {
-                    Console.WriteLine("The Entered Name is Valid");
-                }
-                else
-                {
-                    Console.WriteLine("The Entered Name is Invalid");
-                }
+                Console.WriteLine("The Entered Name is Valid");
             }
-            public void Validating()
+            else
             {
-                Regex regex = new Regex(pattern);
+                Console.WriteLine("The Entered Name is Invalid");
             }
         }
+        public void Validating()
+        {
+            Regex regex = new Regex(FnamePattern);
+        }
+
+        public void ValidatingLastName(string inputLastName)
+        {
+            Regex regex = new Regex(LnamePattern);
+            bool result = regex.IsMatch(inputLastName);
+            if (result)
+            {
+                Console.WriteLine("The Entered LastName is Valid");
+            }
+            else
+            {
+                Console.WriteLine("The Entered LastName is Invalid");
+            }
+        }
+        public void Validatingl()
+        {
+            Regex regex = new Regex(LnamePattern);
+        }
     }
+}

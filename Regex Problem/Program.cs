@@ -9,7 +9,7 @@ namespace Regex_Problem
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Enter your Choice Number to Execute the Regex Program Press-\n 1.Validate First Name\n 2.Exit");
+                Console.WriteLine("Enter your Choice Number to Execute the Regex Program Press-\n 1.Validate First Name\n 2.Validate Last Name \n 3.Exit");
                 int choice = Convert.ToInt32(Console.ReadLine());
                 switch (choice)
                 {
@@ -22,6 +22,13 @@ namespace Regex_Problem
                         regexSample.Validating();
                         break;
                     case 2:
+                        Console.WriteLine("Enter the Last Name to Check Validate:");
+                        Sample lname = new Sample();
+                        string inputLastName = Console.ReadLine();
+                        lname.ValidatingLastName(inputLastName);
+                        lname.Validatingl();
+                        break;
+                    case 3:
                         flag = false;
                         break;
                 }
