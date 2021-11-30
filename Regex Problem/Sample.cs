@@ -13,7 +13,8 @@ namespace Regex_Problem
         static string MobilePattern = @"/^(\+\d{1,3}[- ]?)?\d{10}$/";
         //static string PasswordPattern = @"[a-z,A-Z,0-9]{8,}$";
         //static string PasswordPattern2 = @"^(?=.*[A-Z]).{8,}$";
-        static string PasswordPattern3 = "^[A-Z]{1}[a-z]{7}[0-9]{1}$";
+        //static string PasswordPattern3 = "^[A-Z]{1}[a-z]{7}[0-9]{1}$";
+        static string PasswordPattern4 = "^(?=.*[A-Z]).{8,}$";
 
 
         public void ValidatingFirstName(string input)
@@ -90,7 +91,7 @@ namespace Regex_Problem
 
         public void ValidatingPass(string inputPass)
         {
-            Regex regex = new Regex(PasswordPattern3);
+            Regex regex = new Regex(PasswordPattern4);
             bool res = regex.IsMatch(inputPass);
             if (res)
             {
@@ -101,9 +102,9 @@ namespace Regex_Problem
                 Console.WriteLine("The Password is Invalid");
             }
         }
-            public void ValidatingP()
+            public void ValidatingP4()
             {
-                Regex regex = new Regex(PasswordPattern3);
+                Regex regex = new Regex(PasswordPattern4);
             }
     }
 }
