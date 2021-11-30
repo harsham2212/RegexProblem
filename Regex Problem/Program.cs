@@ -9,7 +9,7 @@ namespace Regex_Problem
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Enter your Choice Number to Execute the Regex Program Press-\n 1.Validate First Name\n 2.Validate Last Name\n 3. Email Validation\n 4.Exit");
+                Console.WriteLine("Enter your Choice Number to Execute the Regex Program Press-\n 1.Validate First Name\n 2.Validate Last Name\n 3. Email Validation\n 4. Mobile No. Validation\n 5.Exit");
                 int choice = Convert.ToInt32(Console.ReadLine());
                 switch (choice)
                 {
@@ -36,6 +36,13 @@ namespace Regex_Problem
                         Mail.ValidatingE();
                         break;
                     case 4:
+                        Console.WriteLine("Enter the Mobile Number to Check Validation:");
+                        Sample Mobile = new Sample();
+                        string inputMob = Console.ReadLine();
+                        Mobile.ValidatingMob(inputMob);
+                        Mobile.ValidatingM();
+                        break;
+                    case 5:
                         flag = false;
                         break;
                 }
