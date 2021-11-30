@@ -11,6 +11,7 @@ namespace Regex_Problem
         static string LnamePattern = "^[A-Z]{1}[a-z]{2,}$";
         static string EmailPattern = "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$";
         static string MobilePattern = @"/^(\+\d{1,3}[- ]?)?\d{10}$/";
+        static string PasswordPattern = @"[a-z,A-Z,0-9]{8,}$";
         public void ValidatingFirstName(string input)
         {
             Regex regex = new Regex(FnamePattern);
@@ -82,5 +83,23 @@ namespace Regex_Problem
         {
             Regex regex = new Regex(MobilePattern);
         }
-    }
-}
+
+        public void ValidatingPass(string inputPass)
+        {
+            Regex regex = new Regex(PasswordPattern);
+            bool res = regex.IsMatch(inputPass);
+            if (res)
+            {
+                Console.WriteLine("The Password is Valid");
+            }
+            else
+            {
+                Console.WriteLine("The Password is Invalid");
+            }
+        }
+            public void ValidatingP()
+            {
+                Regex regex = new Regex(PasswordPattern);
+            }
+        }
+   }
