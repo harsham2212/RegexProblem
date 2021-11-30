@@ -49,6 +49,7 @@ namespace Regex_Problem
                         Password.ValidatingPass(inputPass);
                         Password.ValidatingP();
                         break;
+
                     case 6:
                         flag = false;
                         break;
