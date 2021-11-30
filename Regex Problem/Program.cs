@@ -9,7 +9,7 @@ namespace Regex_Problem
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Enter your Choice Number to Execute the Regex Program Press-\n 1.Validate First Name\n 2.Validate Last Name\n 3. Email Validation\n 4. Mobile No. Validation\n 5. Password Validation with Uppercase\n 6.Exit");
+                Console.WriteLine("Enter your Choice Number to Execute the Regex Program Press-\n 1.Validate First Name\n 2.Validate Last Name\n 3. Email Validation\n 4. Mobile No. Validation\n 5. Password Validation with 1 numeric\n 6.Exit");
                 int choice = Convert.ToInt32(Console.ReadLine());
                 switch (choice)
                 {
@@ -43,7 +43,7 @@ namespace Regex_Problem
                         Mobile.ValidatingM();
                         break;
                     case 5:
-                        Console.WriteLine("Enter the Password to Check Validation with UpperCase");
+                        Console.WriteLine("Enter the Password to Check Validation with 1 numeric ");
                         Sample Password = new Sample();
                         string inputPass = Console.ReadLine();
                         Password.ValidatingPass(inputPass);
